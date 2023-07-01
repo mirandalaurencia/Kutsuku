@@ -102,7 +102,7 @@
           </div>
         </div>
         <div class="row justify-content-md-center">
-            <?php foreach($rows as $r) : ?>
+            <?php foreach($rows as $r) : $sepatu_id = $r['id_sepatu']; ?>
               <div class="col-sm-3 mb-3">
                   <div class="card" style="width: 18rem;">
                       <img class="card-img-top bg-dark" src="images/iconsepatu.png" alt="Card image cap">
@@ -111,7 +111,7 @@
                           <p class="card-text text-info"><?= $r['harga_sepatu']; ?>
                               <span><small class="text-muted"><?= $r['category_name']; ?></small></span>
                           </p>
-                          <a href="detail.php" class="btn btn-primary">Detail</a>
+                          <a href=<?= "detail.php?id_sepatu=$sepatu_id" ?> class="btn btn-primary">Detail</a>
                       </div>
                   </div>
               </div>
